@@ -1,0 +1,7 @@
+1. resample audio to 8KHz, 8bit, using sox:
+	sox sample.wav -r 8000 -b 8 sample_8khz.wav
+	
+2. generate include file in C format:
+	xxd -i -s +44 sample_8khz.wav > sample_data.h
+	
+	
