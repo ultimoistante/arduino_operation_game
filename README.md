@@ -9,9 +9,9 @@ After 35 years the game was still in perfect conditions, so in a day of december
 So I built a simple arduino circuit with a little speaker (probably taken from an old cordless phone) and a red led, and wrote a simple sketch that plays a wav sample and blinks the led when contact between the tweezers and the metal plate is detected.
 
 Play of sample is done via PCM library by damellis: [https://github.com/damellis/PCM/](https://github.com/damellis/PCM/).
-Audio sample data was resampled to 8KHz using [SoX](http://sox.sourceforge.net/):
+Audio sample data was resampled to 8KHz using [SoX](http://sox.sourceforge.net/):  
 `sox sample.wav -r 8000 -b 8 sample_8khz.wav`  
-then converted to C include file using **xxd**:
+then converted to C include file using **xxd**:  
 `xxd -i -s +44 sample_8khz.wav > sample_data.h`
 
 In this repository you can find the arduino code, complete schematic, some photos of the build, and 3d models of the enclosure and the red nose (quickly sketched on tinkercad).
