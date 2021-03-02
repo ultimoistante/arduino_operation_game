@@ -10,7 +10,7 @@ So I built a simple arduino circuit with a little speaker (probably taken from a
 
 Play of sample is done via PCM library by damellis: [https://github.com/damellis/PCM/](https://github.com/damellis/PCM/).
 Audio sample data was resampled to 8KHz using [SoX](http://sox.sourceforge.net/):
-`sox sample.wav -r 8000 -b 8 sample_8khz.wav`
+`sox sample.wav -r 8000 -b 8 sample_8khz.wav`  
 then converted to C include file using **xxd**:
 `xxd -i -s +44 sample_8khz.wav > sample_data.h`
 
